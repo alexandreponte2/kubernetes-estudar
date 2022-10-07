@@ -1,0 +1,1 @@
+for file in $(find . -name "*.yaml"); do kubectl apply -f  $file; done;
