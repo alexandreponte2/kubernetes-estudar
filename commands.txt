@@ -1,1 +1,6 @@
 for file in $(find . -name "*.yaml"); do kubectl apply -f  $file; done;
+
+kubectl rollout history deployment portal-noticias-deployment
+
+kubectl annotate deployments portal-noticias-deployment kubernetes.io/change-cause="Criando portal de noticias na versão 1"
+
