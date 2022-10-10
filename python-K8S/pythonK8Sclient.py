@@ -13,4 +13,4 @@ ret = v1.list_pod_for_all_namespaces(watch=False)
 
 
 for i in ret.items:
-    print("%s" % (i.metadata.namespace))
+    print("%s\t%s\t%s" % (i.metadata.namespace, i.metadata.name, i.status.pod_ip))
