@@ -1,5 +1,4 @@
-def writeConfig(**kwargs):
-    template = """
+
     apiVersion: v1
     kind: pod
     metadata:
@@ -16,7 +15,4 @@ def writeConfig(**kwargs):
           - name: nginx-container
             image: nginx:stable
             ports:
-            - containerPort: 80"""
-
-    with open('somefile.yaml', 'w') as yfile:
-        yfile.write(template.format(**kwargs))
+            - containerPort: 80
