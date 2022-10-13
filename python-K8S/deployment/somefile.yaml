@@ -1,4 +1,4 @@
-template = """
+
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -18,7 +18,4 @@ spec:
             - containerPort: 80
   selector:
     matchLabels:
-      app: nginx-pod"""
-
-with open('deployment-nginx.yaml', 'w') as yfile:
-        yfile.write(template.format())
+      app: nginx-pod
