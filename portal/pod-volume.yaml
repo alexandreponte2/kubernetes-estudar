@@ -17,7 +17,5 @@ spec:
   volumes:
     - name: primeiro-volume
       hostPath:
-        path:  /Users/alexandre.s.ponte/primeiro-volume
+        path:  ~/primeiro-volume
         type: Directory
-
-
