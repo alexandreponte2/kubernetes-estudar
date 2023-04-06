@@ -1,22 +1,25 @@
+
+#Instalar o podman 
 brew install podman
+
+
+
+#iniciar a máquina.
 podman machine init --cpus 2 --memory 2048 --rootful
 podman machine start
 
+
+#criar um cluster simples
 KIND_EXPERIMENTAL_PROVIDER=podman kind create cluster
 
-
-
-kind create cluster --name goku01 --config clustergoku.yml
-
-
-
 *criar o cluster com base em yml
-KIND_EXPERIMENTAL_PROVIDER=podman kind create cluster --name goku01 --config clustergoku.yml
+KIND_EXPERIMENTAL_PROVIDER=podman kind create cluster --name teste01 --config cluster.yml
+
 
 NAME                   STATUS   ROLES           AGE   VERSION
-goku01-control-plane   Ready    control-plane   15m   v1.25.3
-goku01-worker          Ready    <none>          14m   v1.25.3
-goku01-worker2         Ready    <none>          14m   v1.25.3
+teste01-control-plane   Ready    control-plane   15m   v1.25.3
+teste01-worker          Ready    <none>          14m   v1.25.3
+teste01-worker2         Ready    <none>          14m   v1.25.3
 
 
 
@@ -25,7 +28,7 @@ goku01-worker2         Ready    <none>          14m   v1.25.3
 kubectl config get-contexts
 
 *mudar de contexts
-kubectl config use-context kind-goku01
+kubectl config use-context kind-teste01
 
 
 *remover cluster
