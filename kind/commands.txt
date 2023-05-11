@@ -10,6 +10,8 @@ podman machine init --cpus 2 --memory 2048 --rootful
 
 podman machine init --cpus 2 --memory 2048 --disk-size 50 --rootful
 
+podman machine init --cpus 2 --memory 2048 --disk-size 50 --rootful teste01 --now
+
 podman machine start
 
 
