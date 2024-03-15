@@ -4,3 +4,14 @@ kubectl rollout history deployment portal-noticias-deployment
 
 kubectl annotate deployments portal-noticias-deployment kubernetes.io/change-cause="Criando portal de noticias na versão 1"
 
+
+
+
+###
+
+brew install hyperkit
+
+
+minikube start --driver=hyperkit
+
+minikube config set driver hyperkit
