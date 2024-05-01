@@ -1,0 +1,20 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: apache
+spec:
+  containers:
+  - name: httpd
+    image: docker.io/httpd:alpine
+    resources:
+      limits:
+        memory: "128Mi"
+        cpu: "500m"
+    ports:
+      - containerPort: 80
+
+
+
+
+
+#apk add curl
