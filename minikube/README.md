@@ -5,7 +5,7 @@ minikube config set driver podman
 minikube start --driver=hyperkit
 ```
 
-
+kubectl get all
 
 # Acessar um serviço utilizando minikube URL
 ```
