@@ -47,3 +47,14 @@ KIND_EXPERIMENTAL_PROVIDER=podman kind delete cluster
 Caso ocorra algum erro, remova as máquinas existentes.
 podman machine list
 podman machine rm
+
+
+
+*Minikube
+
+brew install podman
+podman machine init --cpus 2 --memory 2048 --rootful
+podman machine start
+minikube config set driver podman
+minikube start
+minikube status

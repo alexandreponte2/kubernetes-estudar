@@ -15,3 +15,9 @@ kubectl get svc
 minikube service nginx --url
 curl http://192.168.205.4:31385
 ```
+
+
+
+controlplane ~ ➜  kubectl replace --force -f ubuntu-sleeper-3.yaml 
+pod "ubuntu-sleeper-3" deleted
+pod/ubuntu-sleeper-3 replaced
