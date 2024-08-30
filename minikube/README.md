@@ -17,11 +17,12 @@ curl http://192.168.205.4:31385
 ```
 
 
-<<<<<<< Updated upstream
-
-controlplane ~ ➜  kubectl replace --force -f ubuntu-sleeper-3.yaml 
-pod "ubuntu-sleeper-3" deleted
-pod/ubuntu-sleeper-3 replaced
-=======
 kubectl replace --force -f file.yml
->>>>>>> Stashed changes
+
+
+
+ETCDCTL_API=3 etcdctl \
+   --cacert=/etc/kubernetes/pki/etcd/ca.crt   \
+   --cert=/etc/kubernetes/pki/etcd/server.crt \
+   --key=/etc/kubernetes/pki/etcd/server.key  \
+   get /registry/secrets/default/secret1 | hexdump -C

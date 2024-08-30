@@ -23,7 +23,14 @@ cm9vdA==
 ❯ echo -n "paswrd" | base64
 cGFzd3Jk
 
+❯ echo -n "bXlzcWw=" | base64 --decode
+mysql%
 
+❯ echo -n "cm9vdA==" | base64 --decode
+root%
+
+❯ echo -n "cGFzd3Jk" | base64 --decode
+paswrd%
 
 ❯ kubectl get secrets app-secret -o yaml
 apiVersion: v1
