@@ -12,3 +12,15 @@ node port
 
 Load balancer
  
+
+
+Criar service account
+kubectl create serviceaccount dashboard-sa
+kubectl get serviceaccount dashboard-sa
+
+kubectl describe serviceaccount dashboard-sa
+
+kubectl describe secret dashboard-sa-token
+
+A service account quando criado um token 
+
